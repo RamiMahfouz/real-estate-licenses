@@ -2,7 +2,7 @@
 import { LicenseTable } from "@/components/table";
 import useStore from "@/store/store";
 import { useEffect, useState } from "react";
-import { UsersDialog } from "./users-dialog/users-dilaog";
+import { UsersDialog } from "../../../components/users-dialog/users-dilaog";
 import Image from "next/image";
 import AddIcon from "../../../assets/icons/circle-plus.svg";
 import { usersService } from "@/services/users-service";

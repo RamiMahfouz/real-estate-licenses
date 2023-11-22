@@ -1,3 +1,4 @@
+"use client";
 import LoginGuard from "@/guards/login-guard";
 import TopNav from "../../components/top-nav";
 

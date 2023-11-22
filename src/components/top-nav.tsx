@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import logoutIcon from "../assets/icons/logout.svg";
 import useStore from "@/store/store";
+import { useEffect, useState } from "react";
 
 export const adminNavListData = [
   {
@@ -25,8 +26,19 @@ export const userNavListData = [
 
 export default function TopNav() {
   const route = useRouter();
-  const userRole = localStorage.getItem("userRole");
-  const navListData = userRole === "admin" ? adminNavListData : userNavListData;
+
+  function navListPermission() {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("userRole") === "admin") {
+        return adminNavListData;
+      } else {
+        return userNavListData;
+      }
+    }
+    return [];
+  }
+
+  const navListData = navListPermission();
   const setWarningDialogHandler = useStore(
     (state) => state.setWarningDialogHandler
   );

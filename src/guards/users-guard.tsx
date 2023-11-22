@@ -1,10 +1,21 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useEffect, useState } from "react";
 import { redirect } from "next/navigation";
 
 export default function UsersGuard({ children }: { children: ReactNode }) {
-  const userRole: any = localStorage.getItem("userRole");
+  function isAdmin() {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("userRole") === "admin") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
+  }
 
-  if (userRole !== "admin") {
+  if (!isAdmin()) {
     redirect("/dashboard");
   } else return <>{children}</>;
 }

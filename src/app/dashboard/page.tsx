@@ -2,6 +2,7 @@
 import { LicenseCard } from "@/components/license-card";
 import { Pagination } from "@/components/pagination";
 import { Skeleton } from "@/components/skeleton";
+import LoginGuard from "@/guards/login-guard";
 import { licensesService } from "@/services/licenses-service";
 import useStore from "@/store/store";
 import moment from "moment";
@@ -65,19 +66,24 @@ export default function DashboardPage() {
             {loading ? (
               <>
                 {[1, 2, 3, 4, 5, 6].map((item) => (
-                  <Skeleton key={item} style="w-full sm:w-[400px] h-[300px] sm:h-[200px] rounded-lg " />
+                  <Skeleton
+                    key={item}
+                    style="w-full sm:w-[400px] h-[300px] sm:h-[200px] rounded-lg "
+                  />
                 ))}
               </>
             ) : (
               <>
                 {licenses?.length === 0 ? (
                   <div>
-                    <span className="text-[25px] font-bold">{"لا توجد تراخيص "}</span>
+                    <span className="text-[25px] font-bold">
+                      {"لا توجد تراخيص "}
+                    </span>
                   </div>
                 ) : (
-                  licenses?.map((license: any,index:number) => (
+                  licenses?.map((license: any, index: number) => (
                     <LicenseCard
-                    key={index}
+                      key={index}
                       values={license}
                       fetchLicenses={fetchLicenses}
                     />

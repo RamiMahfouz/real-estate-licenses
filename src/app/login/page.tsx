@@ -27,8 +27,8 @@ export default function LoginPage() {
     } catch (error) {
       setSnackbarInfo({
         open: true,
-        message:"بريد إلكتروني أو كلمة مرور خاطئة",
-        severity: 'error',
+        message: "بريد إلكتروني أو كلمة مرور خاطئة",
+        severity: "error",
       });
       setLoading(false);
     }

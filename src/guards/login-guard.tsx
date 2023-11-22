@@ -1,25 +1,28 @@
 "use client";
-import { ReactNode } from "react";
+
+import { ReactNode, useEffect, useState } from "react";
 import { redirect } from "next/navigation";
 import moment from "moment";
 import { jwtDecode } from "jwt-decode";
 
 export default function LoginGuard({ children }: { children: ReactNode }) {
-  const token: any = localStorage.getItem("licenseToken");
   function isValid() {
-    if (token) {
-      return isValidToken(token || "");
-    } else {
-      return false;
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("licenseToken")) {
+        return isValidToken(localStorage.getItem("licenseToken") || "");
+      } else {
+        return false;
+      }
     }
   }
   if (isValid()) {
     return <>{children}</>;
+  } else {
+    return redirect("/login");
   }
-  return redirect("/login");
 }
 
-function isValidToken(token: string) {
+export function isValidToken(token: string) {
   try {
     const now = moment();
 
