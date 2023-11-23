@@ -1,17 +1,13 @@
 "use client";
-import https from "https";
 
 import axios from "axios";
 export const licensesService = {
   async fetchLicenses(currentPage: number, recordsPerPage: number) {
-    const httpAgent = new https.Agent({ rejectUnauthorized: false }); // Ignore SSL certificate validation (use with caution)
-
     const jwtToken = localStorage.getItem("licenseToken");
 
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/licenses`,
       {
-        httpsAgent: httpAgent,
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
@@ -25,13 +21,10 @@ export const licensesService = {
     return response?.data ?? [];
   },
   async fetchLicensesById(licenseId: any) {
-    const httpAgent = new https.Agent({ rejectUnauthorized: false }); // Ignore SSL certificate validation (use with caution)
-
     const jwtToken = localStorage.getItem("licenseToken");
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/licenses/${licenseId}`,
       {
-        httpsAgent: httpAgent,
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
@@ -41,13 +34,10 @@ export const licensesService = {
     return response?.data ?? {};
   },
   async deleteLicenses(licenseId: any) {
-    const httpAgent = new https.Agent({ rejectUnauthorized: false }); // Ignore SSL certificate validation (use with caution)
-
     const jwtToken = localStorage.getItem("licenseToken");
     const response = await axios.delete(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/licenses/${licenseId}`,
       {
-        httpsAgent: httpAgent,
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
@@ -57,8 +47,6 @@ export const licensesService = {
     return response;
   },
   async addLicenses(values: any) {
-    const httpAgent = new https.Agent({ rejectUnauthorized: false }); // Ignore SSL certificate validation (use with caution)
-
     const jwtToken = localStorage.getItem("licenseToken");
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/licenses`,
@@ -158,7 +146,6 @@ export const licensesService = {
         },
       },
       {
-        httpsAgent: httpAgent,
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
@@ -168,8 +155,6 @@ export const licensesService = {
     return response?.data;
   },
   async editLicenses(values: any) {
-    const httpAgent = new https.Agent({ rejectUnauthorized: false }); // Ignore SSL certificate validation (use with caution)
-
     const jwtToken = localStorage.getItem("licenseToken");
     const response = await axios.put(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/licenses/${values?.id}`,
@@ -269,7 +254,6 @@ export const licensesService = {
         },
       },
       {
-        httpsAgent: httpAgent,
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
