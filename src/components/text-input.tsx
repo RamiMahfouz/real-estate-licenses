@@ -31,7 +31,7 @@ export function TextInput(props: TextInputProps) {
             " w-full py-3 px-5 text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
             {
               "border-red-600": meta.error && meta.touched,
-              "text-[#3c3c3b]": isDisabled,
+              "text-[#3c3c3b] bg-[#f3f6f7]": isDisabled,
             }
           )}
           value={field.value ?? ""}
