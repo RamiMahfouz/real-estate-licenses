@@ -46,8 +46,8 @@ const listsData = [
 export function Inquiries() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-10 ">
-      {listsData.map((item) => (
-        <div>
+      {listsData.map((item,index) => (
+        <div key={index}>
           <ContentList title={item.title} list={item.list} />
         </div>
       ))}

@@ -68,8 +68,9 @@ export function ContentList(props: ContentListProps) {
         </div>
 
         <div className="flex flex-col gap-4">
-          {list.map((item) => (
+          {list.map((item,index) => (
             <div
+            key={index}
               onMouseOver={hover}
               onMouseOut={unhover}
               onClick={() => window.open("https://balady.gov.sa/")}

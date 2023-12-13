@@ -64,8 +64,9 @@ export function LicenseTopNav() {
             className="mx-6"
           /> */}
           <div className=" items-center gap-7 mx-20 hidden md:flex">
-            {navListContent.map((item) => (
+            {navListContent.map((item,index) => (
               <div
+              key={index}
                 className=" cursor-pointer flex flex-col gap-1 items-center"
                 onClick={() => {
                   setOpen(true);
@@ -100,8 +101,8 @@ export function LicenseTopNav() {
         </div>
         {openResponsiveList ? (
           <div className="flex md:hidden  flex-col mt-4 p-3 gap-6 ">
-            {navListContent.map((item) => (
-              <ResponsiveDropDown title={item.title} content={item.content} />
+            {navListContent.map((item,index) => (
+              <ResponsiveDropDown key={index} title={item.title} content={item.content} />
             ))}
           </div>
         ) : null}
