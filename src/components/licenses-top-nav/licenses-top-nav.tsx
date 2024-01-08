@@ -54,19 +54,19 @@ export function LicenseTopNav() {
   }
   return (
     <>
-      <div className="w-full flex flex-col p-3 md:p-0  bg-[#08706d] transition-all duration-1000  md:h-[64px] ">
-        <div className="flex w-full items-center p-3 justify-between md:justify-normal gap-7">
-          {/* <Image
-            src={"https://balady.gov.sa/themes/custom/balady/logo.svg"}
+      <div className="w-full flex flex-col md:flex-row  p-3   bg-[#08706d] transition-all duration-1000  md:h-[64px] ">
+        <div className="flex w-full items-center  justify-between md:justify-normal gap-7">
+          <Image
+            src="http://95.217.111.114:3000/images/icon.png"
             alt="logo"
-            width={90}
+            width={95}
             height={40}
-            className="mx-6"
-          /> */}
+          />
+
           <div className=" items-center gap-7 mx-20 hidden md:flex">
-            {navListContent.map((item,index) => (
+            {navListContent.map((item, index) => (
               <div
-              key={index}
+                key={index}
                 className=" cursor-pointer flex flex-col gap-1 items-center"
                 onClick={() => {
                   setOpen(true);
@@ -89,10 +89,11 @@ export function LicenseTopNav() {
               {listContent}
             </DropDownInfo>
           </div>
+
           <div onClick={toggleHandler} className=" md:hidden cursor-pointer">
             <Image
               src={menuIcon}
-              alt="logo"
+              alt="menu"
               width={33}
               height={25}
               className="mx-6 "
@@ -101,8 +102,12 @@ export function LicenseTopNav() {
         </div>
         {openResponsiveList ? (
           <div className="flex md:hidden  flex-col mt-4 p-3 gap-6 ">
-            {navListContent.map((item,index) => (
-              <ResponsiveDropDown key={index} title={item.title} content={item.content} />
+            {navListContent.map((item, index) => (
+              <ResponsiveDropDown
+                key={index}
+                title={item.title}
+                content={item.content}
+              />
             ))}
           </div>
         ) : null}

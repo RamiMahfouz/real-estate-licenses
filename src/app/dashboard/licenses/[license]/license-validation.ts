@@ -68,6 +68,12 @@ export const LicenseInitialValues = {
   east_prominence: "",
   south_prominence: "",
   west_prominence: "",
+  glass_type: "",
+  glass_type_value: "",
+  roof_type: "",
+  roof_type_value: "",
+  walls_type: "",
+  walls_type_value: "",
 };
 
 const textData = {
@@ -193,5 +199,13 @@ const textData = {
       south_prominence: "",
       west_prominence: "",
     },
+  },
+  insulation_data: {
+    glass_type: "",
+    glass_type_value: "",
+    roof_type: "",
+    roof_type_value: "",
+    walls_type: "",
+    walls_type_value: "",
   },
 };

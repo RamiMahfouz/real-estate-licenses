@@ -3,6 +3,7 @@
 import { DropDownInfo } from "@/components/licenses-top-nav/drop-down";
 import { LicenseTopNav } from "@/components/licenses-top-nav/licenses-top-nav";
 import TopNav from "@/components/top-nav";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function LicenseLayout({
@@ -22,7 +23,19 @@ export default function LicenseLayout({
         <div className="w-full h-full min-h-[100vh] flex p-6  flex-grow pt-[150px]  bg-[#eceff2]">
           {children}
         </div>
-        <div className="w-full flex justify-center md:justify-end h-[80px] px-4">
+        <div className="w-full flex justify-center md:justify-between h-[80px] px-4">
+          <div className="flex items-center gap-4">
+            <Image
+              src={"http://95.217.111.114:3000/images/footer.png"}
+              alt="logo"
+              width={60}
+              height={40}
+              className="mx-6 w-[50px] h-[50px]"
+            />
+            <span className="text-[14px]">
+              {"© 2023 وزارة الشؤون البلدية والقروية والإسكان"}
+            </span>
+          </div>
           <div className="flex items-center gap-6">
             <span
               onClick={() => window.open("https://balady.gov.sa/")}

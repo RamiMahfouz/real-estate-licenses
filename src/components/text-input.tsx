@@ -27,11 +27,15 @@ export function TextInput(props: TextInputProps) {
           disabled={isDisabled}
           placeholder={placeHolder}
           type={type}
+          style={{
+            WebkitTextFillColor: "#3c3c3b",
+            backgroundColor: isDisabled ? "#f3f6f7" : "#fff",
+          }}
           className={clsx(
-            " w-full py-3 px-5 text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
+            "w-full py-3 px-5  text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
             {
               "border-red-600": meta.error && meta.touched,
-              "text-[#3c3c3b] bg-[#f3f6f7]": isDisabled,
+              "bg-[#f3f6f7]": isDisabled,
             }
           )}
           value={field.value ?? ""}
@@ -45,7 +49,7 @@ export function TextInput(props: TextInputProps) {
           </div>
         ) : null}
 
-        <span className="absolute text-[12px] right-4 -top-2 bg-white font-bold">
+        <span className="absolute text-[12px] text-[#000] right-4 -top-2 bg-white font-bold">
           {label}
         </span>
       </div>

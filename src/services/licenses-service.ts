@@ -144,6 +144,14 @@ export const licensesService = {
             west_prominence: values?.west_prominence,
           },
         },
+        insulation_data: {
+          glass_type: values?.glass_type,
+          glass_type_value: values?.glass_type_value,
+          roof_type: values?.roof_type,
+          roof_type_value: values?.roof_type_value,
+          walls_type: values?.walls_type,
+          walls_type_value: values?.walls_type_value,
+        },
       },
       {
         headers: {
@@ -251,6 +259,14 @@ export const licensesService = {
             south_prominence: values?.south_prominence,
             west_prominence: values?.west_prominence,
           },
+        },
+        insulation_data: {
+          glass_type: values?.glass_type,
+          glass_type_value: values?.glass_type_value,
+          roof_type: values?.roof_type,
+          roof_type_value: values?.roof_type_value,
+          walls_type: values?.walls_type,
+          walls_type_value: values?.walls_type_value,
         },
       },
       {

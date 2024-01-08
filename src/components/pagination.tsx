@@ -26,7 +26,7 @@ export function Pagination(props: PaginationProps) {
 
   return (
     <>
-      <div className="flex items-center flex-row-reverse">
+      <div className="flex items-center mt-1 flex-row-reverse">
         <Image
           onClick={prevPage}
           src={arrowButtonLeftIcon}

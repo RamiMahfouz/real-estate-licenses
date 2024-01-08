@@ -6,6 +6,7 @@ import {
   applicantData,
   contractingData,
   geolocationData,
+  insulationData,
   mainData,
   midpointCoordinates,
   ownershipData,
@@ -158,8 +159,14 @@ export default function EditLicense() {
             licenseData?.dimensions_boundaries?.prominence?.south_prominence,
           west_prominence:
             licenseData?.dimensions_boundaries?.prominence?.west_prominence,
+          glass_type: licenseData?.insulation_data?.glass_type,
+          glass_type_value: licenseData?.insulation_data?.glass_type_value,
+          roof_type: licenseData?.insulation_data?.roof_type,
+          roof_type_value: licenseData?.insulation_data?.roof_type_value,
+          walls_type: licenseData?.insulation_data?.walls_type,
+          walls_type_value: licenseData?.insulation_data?.walls_type_value,
         });
-      } catch (error:any) {
+      } catch (error: any) {
         setSnackbarInfo({
           open: true,
           message: error?.response?.data?.message,
@@ -391,10 +398,29 @@ export default function EditLicense() {
                 </div>
               </div>
 
+              <div className="flex flex-col w-full">
+                <span className="md:text-[30px] sm:text-[24px] text-[20px] font-bold">
+                  {"بيانات العزل الحراري"}
+                </span>
+                <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {insulationData.map((item) => (
+                    <div key={item.label} className="min-w-full">
+                      <TextInput
+                        name={item.name}
+                        type={item.type}
+                        label={item.label}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <PledgesSection
                 formValues={formik.values}
                 setFormValues={setFormValues}
               />
+
               <LoadingButton onClick={formik.submitForm}>{"حفظ"}</LoadingButton>
             </>
           )}

@@ -188,6 +188,39 @@ export const contractingData = [
   },
 ];
 
+export const insulationData = [
+  {
+    name: "glass_type",
+    type: "text",
+    label: "نوع الزجاج",
+  },
+  {
+    name: "glass_type_value",
+    type: "text",
+    label: "قيمة نوع الزجاج",
+  },
+  {
+    name: "roof_type",
+    type: "text",
+    label: "نوع السقف",
+  },
+  {
+    name: "roof_type_value",
+    type: "text",
+    label: "قيمة نوع السقف",
+  },
+  {
+    name: "walls_type",
+    type: "text",
+    label: "نوع الجدران",
+  },
+  {
+    name: "walls_type_value",
+    type: "text",
+    label: "قيمة نوع الجدران",
+  },
+];
+
 export const tableHeadDataOwnerData = [
   {
     title: "#",
