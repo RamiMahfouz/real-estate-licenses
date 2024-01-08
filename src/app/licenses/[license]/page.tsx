@@ -383,6 +383,7 @@ export default function LicenseInfo() {
                           name={item.name}
                           type={item.type}
                           label={item.label}
+                          isDisabled
                         />
                       </div>
                     ))}
