@@ -23,8 +23,8 @@ export default function LicenseLayout({
         <div className="w-full h-full min-h-[100vh] flex p-6  flex-grow pt-[150px]  bg-[#eceff2]">
           {children}
         </div>
-        <div className="w-full flex justify-center md:justify-between h-[80px] px-4">
-          <div className="flex items-center gap-4">
+        <div className="w-full items-center gap-3 flex flex-col md:flex-row justify-center md:justify-between md:h-[80px] px-4">
+          <div className="flex flex-col md:flex-row items-center gap-2">
             <Image
               src={"http://95.217.111.114:3000/images/footer.png"}
               alt="logo"
