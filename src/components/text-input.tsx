@@ -25,21 +25,16 @@ export function TextInput(props: TextInputProps) {
     <>
       <div className="w-full relative">
         <input
-          disabled={isDisabled}
+          readOnly={isDisabled ? true : false}
           placeholder={placeHolder}
           type={type}
-          style={{
-            // WebkitTextFillColor: "#3c3c3b",
-            backgroundColor: isDisabled ? "#f3f6f7" : "#fff",
-          }}
-          className={classes.inputText}
-          // className={clsx(
-          //   "w-full py-3 px-5  text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
-          //   {
-          //     "border-red-600": meta.error && meta.touched,
-          //     "bg-[#f3f6f7]": isDisabled,
-          //   }
-          // )}
+          className={clsx(
+            "w-full py-3 px-5 text-[#3c3c3b]  text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
+            {
+              "border-red-600": meta.error && meta.touched,
+              "bg-[#f3f6f7]": isDisabled,
+            }
+          )}
           value={field.value ?? ""}
           onChange={handleChange}
         />
