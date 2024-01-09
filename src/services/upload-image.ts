@@ -17,6 +17,7 @@ export async function UploadImage(params: UploadImageParams) {
       headers: {
         accept: "*/*",
         "Content-Type": "multipart/form-data",
+        "Cache-Control": "no-cache",
       },
     }
   );

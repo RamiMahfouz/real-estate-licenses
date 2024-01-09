@@ -25,12 +25,10 @@ export default function LicenseLayout({
         </div>
         <div className="w-full items-center gap-3 flex flex-col md:flex-row justify-center md:justify-between md:h-[80px] px-4">
           <div className="flex flex-col md:flex-row items-center gap-2">
-            <Image
-              src={"http://95.217.111.114:3000/images/footer.png"}
+            <img
+              src={"https://www.api.baldy.com.co/images/footer.png"}
               alt="logo"
-              width={60}
-              height={40}
-              className="mx-6 w-[50px] h-[50px]"
+              className="mx-6 w-[60px] h-[40px]"
             />
             <span className="text-[14px]">
               {"© 2023 وزارة الشؤون البلدية والقروية والإسكان"}

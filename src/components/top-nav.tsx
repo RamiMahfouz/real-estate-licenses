@@ -86,10 +86,10 @@ export default function TopNav() {
       <div className="w-full flex flex-col fixed top-0 z-[100]">
         <div className="w-full bg-[#08706d] h-[64px] gap-5 flex items-center  justify-between px-20">
           <div className="flex items-center gap-3">
-            <Image
-              className="cursor-pointer"
+            <img
+              className="cursor-pointer hidden md:block "
               onClick={() => chooseFile(logoInputRef)}
-              src="http://95.217.111.114:3000/images/icon.png"
+              src="https://www.api.baldy.com.co/images/icon.png"
               alt="logo"
               width={95}
               height={40}
@@ -102,10 +102,10 @@ export default function TopNav() {
           </div>
 
           <div className="flex items-center gap-5">
-            <Image
-              className="cursor-pointer"
+            <img
+              className="cursor-pointer hidden md:block"
               onClick={() => chooseFile(footerInputRef)}
-              src="http://95.217.111.114:3000/images/footer.png"
+              src="https://www.api.baldy.com.co/images/footer.png"
               alt="logo"
               width={95}
               height={40}

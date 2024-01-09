@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { DropDownInfo } from "./drop-down";
 import { AboutBalady } from "./list-contents/about-balady";
@@ -56,11 +58,10 @@ export function LicenseTopNav() {
     <>
       <div className="w-full flex flex-col md:flex-row  p-3   bg-[#08706d] transition-all duration-1000  md:h-[64px] ">
         <div className="flex w-full items-center  justify-between md:justify-normal gap-7">
-          <Image
-            src="http://95.217.111.114:3000/images/icon.png"
+          <img
+            className="w-[95px] h-[40px]"
+            src="https://www.api.baldy.com.co/images/icon.png"
             alt="logo"
-            width={95}
-            height={40}
           />
 
           <div className=" items-center gap-7 mx-20 hidden md:flex">

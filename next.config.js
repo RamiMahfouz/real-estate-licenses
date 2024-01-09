@@ -8,13 +8,13 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '95.217.111.114',
-        port: '3000',
-        pathname: '/images/**',
+        protocol: "https",
+        hostname: "www.api.baldy.com.co",
+        port: "",
+        pathname: "/images/**",
       },
     ],
-  }
+  },
 };
 
 module.exports = nextConfig;
