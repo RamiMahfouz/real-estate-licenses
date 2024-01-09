@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import { useField, useFormikContext } from "formik";
+import classes from "./text-input.module.css";
 
 interface TextInputProps {
   label?: string;
@@ -28,16 +29,17 @@ export function TextInput(props: TextInputProps) {
           placeholder={placeHolder}
           type={type}
           style={{
-            WebkitTextFillColor: "#3c3c3b",
+            // WebkitTextFillColor: "#3c3c3b",
             backgroundColor: isDisabled ? "#f3f6f7" : "#fff",
           }}
-          className={clsx(
-            "w-full py-3 px-5  text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
-            {
-              "border-red-600": meta.error && meta.touched,
-              "bg-[#f3f6f7]": isDisabled,
-            }
-          )}
+          className={classes.inputText}
+          // className={clsx(
+          //   "w-full py-3 px-5  text-[14px] rounded-md border-[1px] focus:border-[black]  outline-none border-[#d2dbee]",
+          //   {
+          //     "border-red-600": meta.error && meta.touched,
+          //     "bg-[#f3f6f7]": isDisabled,
+          //   }
+          // )}
           value={field.value ?? ""}
           onChange={handleChange}
         />
