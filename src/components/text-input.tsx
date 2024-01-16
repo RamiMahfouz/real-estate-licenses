@@ -46,7 +46,7 @@ export function TextInput(props: TextInputProps) {
           </div>
         ) : null}
 
-        <span className="absolute text-[12px] text-[#000] right-4 -top-2 bg-white font-bold">
+        <span className="absolute text-[11px] text-[#000] right-4 -top-2 bg-white font-bold">
           {label}
         </span>
       </div>

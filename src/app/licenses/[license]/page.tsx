@@ -182,7 +182,7 @@ export default function LicenseInfo() {
           {(formik) => (
             <>
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"البيانات الرئيسية"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -201,7 +201,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="font-bold md:text-[32px] sm:text-[24px] text-[20px]">
+                <span className="font-bold md:text-[30px] sm:text-[24px] text-[19px]">
                   {"بيانات مقدم الطلب"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -220,7 +220,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات المالك"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -231,7 +231,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات وثيقة الملكية"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -250,7 +250,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full ">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"مكونات البناء"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -261,7 +261,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full ">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"الأبعاد والحدود"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -269,7 +269,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات القرار المساحي"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -288,7 +288,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات الاراضي"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -299,7 +299,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات الموقع الجغرافي"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -318,7 +318,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"إحداثيات نقطة الوسط"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -337,7 +337,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full overflow-auto">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"الإحداثيات"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -348,7 +348,7 @@ export default function LicenseInfo() {
               </div>
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-bold">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                   {"بيانات التعاقد"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -372,7 +372,7 @@ export default function LicenseInfo() {
               formValues.walls_type ||
               formValues.walls_type_value ? (
                 <div className="flex flex-col w-full">
-                  <span className="md:text-[30px] sm:text-[24px] text-[20px] font-bold">
+                  <span className="md:text-[30px] sm:text-[24px] text-[19px] font-bold">
                     {"بيانات العزل الحراري"}
                   </span>
                   <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
@@ -392,7 +392,7 @@ export default function LicenseInfo() {
               ) : null}
 
               <div className="flex flex-col w-full">
-                <span className="md:text-[32px] sm:text-[24px] text-[20px] font-[500]">
+                <span className="md:text-[30px] sm:text-[24px] text-[19px] font-[500]">
                   {"التعهدات"}
                 </span>
                 <div className="w-[40px] my-6 h-[6px] bg-[#85bd48]"></div>
